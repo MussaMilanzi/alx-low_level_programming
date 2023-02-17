@@ -7,15 +7,15 @@
 int main(void)
 {
 	char x;
-	int i;
+	int j;
 	long int b;
 	long long int m;
 	float c;
 
-printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(x));
-printf("Size of a int: %lu byte(s)\n", (unsigned long)sizeof(i));
-printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
-printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(m));
-printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(c));
+printf("Size of a char: %i byte(s)\n", sizeof(x));
+printf("Size of a int: %i byte(s)\n", sizeof(j));
+printf("Size of a long int: %i byte(s)\n", sizeof(b));
+printf("Size of a long long int: %i byte(s)\n", sizeof(m));
+printf("Size of a float: %i byte(s)\n", sizeof(c));
 return (0);
 }
