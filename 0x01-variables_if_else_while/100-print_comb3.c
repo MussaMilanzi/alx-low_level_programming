@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Program that prints two digits
  * Return: 0
@@ -9,13 +10,13 @@ int main(void)
 	int i;
 	int j;
 
-	for (i = 0; i <= 99; i++)
+	for (i = 0; i <= 8; i++)
 	{
-		for (j = i + 1; j <= 100; j++)
+		for (j = i + 1; j <= 9; j++)
 		{
 			putchar(i + '0');
 			putchar(j + '0');
-			if (i != 99 || j != 100)
+			if (i != 8 || j != 9)
 			{
 				putchar(',');
 				putchar(' ');
