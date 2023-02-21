@@ -1,1 +1,1 @@
-The project is about c functions and  nested loops
+The program that prints _putchar, followed by a new line.
