@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (i == 0)
 			printf("%d", i);
-		else if (i == 1)
+		else if (i == 0)
 			printf(", %ld", k);
 		else
 		{
