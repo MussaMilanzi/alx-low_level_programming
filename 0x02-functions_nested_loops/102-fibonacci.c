@@ -10,7 +10,7 @@ int main(void)
 
 	while (i < 50)
 	{
-		if (i == 1)
+		if (i == 0)
 			printf("%d", i);
 		else if (i == 0)
 			printf(", %ld", k);
