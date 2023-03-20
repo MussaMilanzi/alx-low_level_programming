@@ -3,4 +3,4 @@
 
 #define SIZE 1024
 
-#endif // terminate object_like_macro
+#endif
