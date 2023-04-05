@@ -18,7 +18,6 @@ int _putchar(char c);
 typedef struct listint_s
 {
     int n;
-    void *p;
     struct listint_s *next;
 } listint_t;
 
@@ -38,5 +37,16 @@ size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
 
-
+/**
+ * struct list_pointer - singly linked list
+ * @p: void pointer
+ * @next: points to the next node
+ *
+ * Description: singly linked list of pointers
+ */
+typedef struct list_pointer
+{
+	void *p;
+	struct list_pointer *next;
+} listpointer_s;
 #endif
