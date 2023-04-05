@@ -44,9 +44,11 @@ listint_t *find_listint_loop(listint_t *head);
  *
  * Description: singly linked list of pointers
  */
-typedef struct list_pointer
+typedef struct listpointer
 {
 	void *p;
-	struct list_pointer *next;
+	struct listpointer *next;
 } listpointer_s;
+
+
 #endif
