@@ -33,11 +33,13 @@ void free_listpointer(listpointer_s **head)
 size_t free_listint_safe(listint_t **h)
 {
 	size_t n_node = 0;
-	listpointer_s *head_ptr, *new_n, *next_node;
+	listpointer_s *head_ptr;
+	listpointer_s *new_n;
+	listpointer_s *next_node;
 	listint_t *new_node;
 
 	head_ptr = NULL;
-	while (*h != NULL)
+	for (; *h != NULL; n_node++)
 	{
 		new_n = malloc(sizeof(listpointer_s));
 
@@ -50,7 +52,7 @@ size_t free_listint_safe(listint_t **h)
 
 		next_node = head_ptr;
 
-		while (next_node->next != NULL)
+		for (; next_node->next != NULL; n_node++)
 		{
 			next_node = next_node->next;
 			if (*h == next_node->p)
@@ -64,7 +66,6 @@ size_t free_listint_safe(listint_t **h)
 		new_node = *h;
 		*h = (*h)->next;
 		free(new_node);
-		n_node++;
 	}
 
 	*h = NULL;
