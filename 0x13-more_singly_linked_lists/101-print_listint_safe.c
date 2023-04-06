@@ -47,15 +47,17 @@ size_t print_listint_safe(const listint_t *head)
 		new_n->p = (void *)head;
 		new_n->next = head_ptr;
 		head_ptr = new_n;
-		while (next_node->next != NULL)
+		for (; next_node->next != NULL; n_node++)
 		{
 			next_node = next_node->next;
 			if (head == next_node->p)
 			{
+				n_node = 1;
 				printf("-> [%p] %d\n", (void *)head, head->n);
 				free_listpointer(&head_ptr);
 				return (n_node);
 			}
+
 		}
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
