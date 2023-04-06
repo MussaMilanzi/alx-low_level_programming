@@ -37,7 +37,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	head_ptr = NULL;
 
-	while (head != NULL)
+	for (; head != NULL; n_node++)
 	{
 		new_n = malloc(sizeof(listpointer_s));
 		if (new_n == NULL)
@@ -59,7 +59,7 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
-		n_node++;
+		break;
 	}
 	free_listpointer(&head_ptr);
 	return (n_node);
